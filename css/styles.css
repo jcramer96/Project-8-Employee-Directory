@@ -8,8 +8,9 @@ html {
 }
 
 body{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Nunito', sans-serif;
     font-size: 1em;
+    font-weight: 400;
     position: relative;
     background-color: rgb(243, 243, 243);
 } 
@@ -20,7 +21,6 @@ header {
 }
 
 h1 {
-    width: 100%;
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
@@ -55,18 +55,24 @@ h1 {
     margin: auto auto auto 10px;
 }
 
-.name {
-    padding-bottom: 5px;
+h2 {
     font-size: .9rem;
+    font-weight: 700;
+    padding-top: 10px;
 }
 
-.email,
-.address {
+p {
     font-size: .75rem;
+    color: gray;
 }
 
-.email {
-    padding-bottom: 5px;
+h2,
+p {
+    padding-bottom: 10px;
+}
+
+.phone {
+    padding-top: 10px;
 }
 
 .overlay {
@@ -91,9 +97,18 @@ h1 {
 
 .modal-close { 
     position: absolute; 
-    right: 15px;
-    top: 5px;
+    right: 25px;
+    top: 10px;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+hr {
+    height: 1px;
+    color: lightgray;
+    background-color: lightgray;
+    margin: 20px 0 20px;
 }
 
 .hidden { 
@@ -116,6 +131,6 @@ h1 {
 
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        margin: auto 20px 20px;
+        margin: auto 5% 20px;
     }
 }
