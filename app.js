@@ -42,7 +42,7 @@ function displayModal(index) {
         <p class="address">${city}</p>
         <hr />
         <p class="phone">${phone}</p>
-        <p class="address">${street}, ${state} ${postcode}</p> 
+        <p class="address">${street} ${city}, ${state} ${postcode}</p> 
         <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p> 
     </div>
   `;
