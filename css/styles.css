@@ -18,14 +18,24 @@ body{
 header {
     width: 100%;
     padding: 10px 0;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 h1 {
     font-size: 1em;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 100px;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+#filter {
+    width: 350px;
+    margin-right: 100px;
+    padding-left: 15px;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 
 .grid-container {

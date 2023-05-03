@@ -4,6 +4,7 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const filter = document.querySelector("#filter");
 
 fetch(urlAPI)
     .then(res => res.json()) 
@@ -14,9 +15,11 @@ fetch(urlAPI)
 function displayEmployees(employeeData) {
     employees = employeeData;
     let employeeHTML = '';
-    employees.forEach((employee, index) => { let name = employee.name;
-    let email = employee.email;
-    let city = employee.location.city; let picture = employee.picture;
+    employees.forEach((employee, index) => { 
+        let name = employee.name;
+        let email = employee.email;
+        let city = employee.location.city; 
+        let picture = employee.picture;
     employeeHTML += `
         <div class="card" data-index="${index}">
             <img class="avatar" src="${picture.large}" /> 
@@ -42,7 +45,7 @@ function displayModal(index) {
         <p class="address">${city}</p>
         <hr />
         <p class="phone">${phone}</p>
-        <p class="address">${street} ${city}, ${state} ${postcode}</p> 
+        <p class="address">${street.number} ${street.name} ${city}, ${state} ${postcode}</p> 
         <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p> 
     </div>
   `;
@@ -62,3 +65,21 @@ modalClose.addEventListener('click', () => {
         overlay.classList.add("hidden");
     }
 );
+
+/*filter.addEventListener('keyup', e => {
+    let currentValue = e.target.value.toLowerCase();
+
+    employees.forEach(employee, index => {
+        const name = employee.name;
+        if (name.toLowerCase().includes(currentValue)) {
+            employee.style.display = 'block';
+        } else {
+            employee.style.display = 'none';
+        }
+    })
+}) */
+
+function filterNames(value) {
+    value = value.toUpperCase();
+    let employees
+}
