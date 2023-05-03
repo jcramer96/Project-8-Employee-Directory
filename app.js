@@ -66,20 +66,15 @@ modalClose.addEventListener('click', () => {
     }
 );
 
-/*filter.addEventListener('keyup', e => {
-    let currentValue = e.target.value.toLowerCase();
-
-    employees.forEach(employee, index => {
-        const name = employee.name;
-        if (name.toLowerCase().includes(currentValue)) {
-            employee.style.display = 'block';
-        } else {
-            employee.style.display = 'none';
-        }
-    })
-}) */
-
+// Filter employees by name //
 function filterNames(value) {
     value = value.toUpperCase();
-    let employees
-}
+    Array.prototype.forEach.call(employees, index => {
+        let name = index.name;
+        if (name.includes(value)) {
+            index.style.display = "block";
+        } else {
+            index.style.display = "none";
+        }
+    })
+};
