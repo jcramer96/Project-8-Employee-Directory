@@ -118,6 +118,22 @@ p {
     background-color: transparent;
 }
 
+.modal-forward {
+    position: absolute;
+    right: -20px;
+    top: 150px;
+    cursor: pointer;
+    width: 25px;
+}
+
+.modal-backward {
+    position: absolute;
+    left: -20px;
+    top: 150px;
+    cursor: pointer;
+    width: 25px;
+}
+
 hr {
     height: 1px;
     color: lightgray;

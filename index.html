@@ -13,7 +13,7 @@
         <body> 
             <header>
                 <h1>Awesome Startup Employee Directory</h1>
-                <input type="text" id="filter" placeholder="Search Employees" oninput="filterNames(this.value)" /> 
+                <input type="text" id="filter" placeholder="Search Employees" /> 
             </header>
             <main class="grid-container"> 
             
@@ -21,7 +21,9 @@
 
             <div class="overlay hidden"> 
                 <div class="modal">
-                    <button class="modal-close">X</button> 
+                    <button class="modal-close">X</button>
+                    <button class="modal-forward">></button>
+                    <button class="modal-backward"><</button> 
                     <div class="modal-content">
                     
                     </div>

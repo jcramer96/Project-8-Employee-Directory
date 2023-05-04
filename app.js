@@ -4,7 +4,7 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-const filter = document.querySelector("#filter");
+const filter = document.getElementById("filter");
 
 fetch(urlAPI)
     .then(res => res.json()) 
@@ -67,14 +67,14 @@ modalClose.addEventListener('click', () => {
 );
 
 // Filter employees by name //
-function filterNames(value) {
-    value = value.toUpperCase();
-    Array.prototype.forEach.call(employees, index => {
-        let name = index.name;
-        if (name.includes(value)) {
-            index.style.display = "block";
+filter.addEventListener('keyup', e => {
+    let currentValue = e.target.value.toLowerCase();
+    let employees = document.querySelectorAll('h2');
+    employees.forEach(employee => {
+        if (employee.textContent.toLowerCase().includes(currentValue)) {
+            employee.parentNode.parentNode.style.display = 'grid';
         } else {
-            index.style.display = "none";
+            employee.parentNode.parentNode.style.display = 'none';
         }
     })
-};
+});
