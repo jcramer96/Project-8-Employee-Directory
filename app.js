@@ -4,6 +4,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const modalForward = document.querySelector(".modal-forward");
+const modalBackward = document.querySelector(".modal-backward")
 const filter = document.getElementById("filter");
 
 fetch(urlAPI)
@@ -78,3 +80,17 @@ filter.addEventListener('keyup', e => {
         }
     })
 });
+
+//Open next modal window//
+modalForward.addEventListener('click', () => {
+    for (i = 0; i < employees.index.length; i++) {
+        displayModal(index);
+    }
+})
+
+//Open previous modal window
+modalBackward.addEventListener('click', () => {
+    for (i = 0; i < employees.index.length; i--) {
+        displayModal(index);
+    }
+})
