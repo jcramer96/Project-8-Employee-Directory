@@ -58,13 +58,13 @@ h1 {
 }
 
 .avatar {
-    margin: auto 0 auto auto;
+    margin: auto;
     width: 80px;
     border-radius: 50%;
 }
 
 .text-container {
-    margin: auto auto auto 10px;
+    margin: auto;
 }
 
 h2 {
@@ -107,6 +107,12 @@ p {
     border: 1px solid #778; 
     border-radius: 5px; 
     padding: 30px 20px;
+}
+
+.modal-content {
+    margin: auto; 
+    position: relative; 
+    text-align: center; 
 }
 
 .modal-close { 
