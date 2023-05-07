@@ -41,7 +41,7 @@ function displayModal(index) {
   let date = new Date(dob.date);
   const modalHTML = `
     <img class="avatar" src="${picture.large}" /> 
-    <div class="text-container">
+    <div class="text-container" data-index=${index}>
         <h2 class="name">${name.first} ${name.last}</h2> 
         <p class="email">${email}</p>
         <p class="address">${city}</p>
@@ -83,14 +83,18 @@ filter.addEventListener('keyup', e => {
 
 //Open next modal window//
 modalForward.addEventListener('click', () => {
-    for (index = 0; index < employees.length; index++) {
+    let index = parseInt(modalContainer.querySelector('.text-container').dataset.index);
+    if (index !== employees.length - 1) {
+        index += 1;
         displayModal(index);
     }
-})
+});
 
 //Open previous modal window
 modalBackward.addEventListener('click', () => {
-    for (index = 0; index < employees.length; index--) {
+    let index = parseInt(modalContainer.querySelector('.text-container').dataset.index);
+    if (index !== 0) {
+        index -= 1;
         displayModal(index);
     }
-})
+});
