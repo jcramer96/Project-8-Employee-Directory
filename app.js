@@ -83,14 +83,14 @@ filter.addEventListener('keyup', e => {
 
 //Open next modal window//
 modalForward.addEventListener('click', () => {
-    for (i = 0; i < employees.index.length; i++) {
+    for (index = 0; index < employees.length; index++) {
         displayModal(index);
     }
 })
 
 //Open previous modal window
 modalBackward.addEventListener('click', () => {
-    for (i = 0; i < employees.index.length; i--) {
+    for (index = 0; index < employees.length; index--) {
         displayModal(index);
     }
 })
